@@ -26,3 +26,8 @@ hooks:
     - location: scripts/application_start.sh
       timeout: 300
       runas: ec2-user
+
+  PostInstall:
+    - location: scripts/post_install.sh
+      timeout: 300
+      runas: root

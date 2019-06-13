@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-cd ~/node
+cd /home/ec2-user/node
 npm install
 
 sed '$d' /etc/nginx/conf.d/ssl.conf
