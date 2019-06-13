@@ -2,7 +2,14 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /webapps
+    destination: /home/ec2-user/node
+permissions:
+  - object: /home/ec2-user
+    owner: ec2-user
+    group: ec2-user
+    type:
+      - directory
+      - file
 
 hooks:
   ApplicationStop:
@@ -18,4 +25,14 @@ hooks:
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
-      runas: root
+      runas: ec2-user
+
+  AfterInstall:
+    - location: scripts/post_install.sh
+      timeout: 600
+      runas: ec2-user
+
+  ValidateService:
+    - location: scripts/validate.sh
+      timeout: 60
+      runas: ec2-user

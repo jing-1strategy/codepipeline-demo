@@ -1,4 +1,7 @@
-#!/bin/bash
-source /root/.bashrc
-cd /webapps
-nohup node sampleapp.js &
+#!/usr/bin/env bash
+if [ ! -z "$DEPLOYMENT_GROUP_NAME" ]; then
+ export NODE_ENV=$DEPLOYMENT_GROUP_NAME
+fi
+
+cd ~/node
+pm2 start bin/www -n www -i 0
