@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 cd ~/node
-pm2 stop www || true
+pm2 stop sampleapp
 
 # kill -9 $(ps aux | grep '\snode\s' | awk '{print $2}')
