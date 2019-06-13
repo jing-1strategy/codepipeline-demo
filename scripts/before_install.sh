@@ -2,7 +2,7 @@
 set -e
 
 # add nodejs to yum
-curl --silent --location https://rpm.nodesource.com/setup_4.x | bash -
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 yum -y install nodejs 
 
 # install pm2 module globaly
