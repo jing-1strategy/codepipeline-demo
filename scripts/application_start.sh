@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo su
+source /root/.bashrc
 cd /webapps
 node sampleapp.js
