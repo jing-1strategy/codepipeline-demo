@@ -9,7 +9,7 @@ yum -y install nodejs
 npm install -g pm2
 pm2 update
 
-# update default nginx.conf
-unalias cp
-cp -rf /webapps/configurations/nginx.conf /etc/nginx/nginx.conf
-nginx -s reload
+# # update default nginx.conf
+# unalias cp
+# cp -rf /webapps/configurations/nginx.conf /etc/nginx/nginx.conf
+# nginx -s reload
