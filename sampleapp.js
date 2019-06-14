@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
            <html>
            <body>
                <h1>http method: ${req.method} </h1>
-               <h2>version 2.0</h2>
+               <h2>version 1.1</h2>
                <form action="/" method="post">
                    <input type="text" name="fname" /><br />
                    <input type="number" name="age" /><br />
