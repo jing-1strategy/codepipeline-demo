@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-cd ~/node
+cd /home/ec2-user/node
 pm2 stop sampleapp
