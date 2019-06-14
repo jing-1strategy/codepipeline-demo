@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
 cd /home/ec2-user/node
-pm2 start --name sampleapp sampleapp.js 
-pm2 save
+pm2 start --name sampleapp /home/ec2-user/node/sampleapp.js 
